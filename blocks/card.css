@@ -55,10 +55,6 @@
     height: 288px;
   }
 
-  .card__like-btn {
-    opacity: 0.4;
-  }
-
   .card__like-btn:hover {
     opacity: 1;
     filter: brightness(0);
