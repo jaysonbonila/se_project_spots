@@ -54,9 +54,4 @@
   .card__image {
     height: 288px;
   }
-
-  .card__like-btn:hover {
-    opacity: 1;
-    filter: brightness(0);
-  }
 }
