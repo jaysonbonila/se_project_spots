@@ -31,6 +31,39 @@
   position: relative;
 }
 
+.modal__container_type_preview {
+  padding: 0;
+  max-width: 80vw;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  box-shadow: none;
+}
+
+.modal__preview-image {
+  max-width: 80vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 12px;
+  background: #fff;
+}
+
+.modal__preview-caption {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  max-width: 80vw;
+  word-break: break-word;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin: 0 0 12px 0;
+}
+
 .modal__close-btn {
   position: absolute;
   top: 32px;
@@ -40,14 +73,9 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 2rem;
-  color: #2121214d;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  transition: background 0.2s, color 0.2s;
-  z-index: 10;
 }
 
 .modal__close-btn img {
@@ -55,69 +83,19 @@
   height: 40px;
 }
 
-.modal__title {
-  margin: 0 0 32px;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
-  font-size: 32px;
-}
-
-.modal__form {
-  display: flex;
-  flex-direction: column;
-}
-
-.modal__label {
-  margin: 0 0 32px;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
-}
-
-.modal__input {
-  display: block;
-  margin: 8px 0 0;
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  box-sizing: border-box;
-  height: 52px;
-  font-size: 20px;
-}
-
-.modal__input::placeholder {
-  color: #2121214d;
-}
-
-.modal__submit-btn {
-  max-width: 150px;
-  background-color: #212121;
-  color: #fff;
-  padding-top: 18px;
-  padding-right: 32px;
-  padding-bottom: 18px;
-  padding-left: 32px;
-  gap: 8px;
-  border-radius: 8px;
-}
-
 @media screen and (max-width: 627px) {
-  .modal__submit-btn {
-    max-width: 100%;
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
-    display: block;
-  }
-
   .modal__container {
     padding: 12px;
   }
 
-  .modal__input {
-    height: 48px;
-    font-size: 16px;
+  .modal__preview-image {
+    max-width: 98vw;
+    max-height: 60vh;
   }
 
-  .modal__title {
-    font-size: 20px;
+  .modal__preview-caption {
+    font-size: 16px;
+    max-width: 98vw;
   }
 
   .modal__close-btn {
@@ -125,12 +103,5 @@
     right: 12px;
     width: 32px;
     height: 32px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .modal__close-btn img {
-    width: 40px;
-    height: 40px;
   }
 }
