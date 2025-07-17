@@ -38,8 +38,14 @@
         </section>
         <template id="card-template">
           <li class="card">
-            <img class="card__image" />
-            <button type="button" class="card__delete-btn"></button>
+            <div class="card__image-container">
+              <img class="card__image" />
+              <button
+                type="button"
+                class="card__delete-btn"
+                aria-label="Delete"
+              ></button>
+            </div>
             <div class="card__content">
               <h2 class="card__title"></h2>
               <button type="button" class="card__like-btn"></button>
@@ -64,6 +70,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your name"
+                required
               />
             </label>
             <label for="profile-description-input" class="modal__label">
@@ -73,6 +80,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Describe yourself"
+                required
               />
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
@@ -93,6 +101,7 @@
                 type="url"
                 class="modal__input"
                 placeholder="Place a link to the picture"
+                required
               />
             </label>
             <label for="card-caption-input" class="modal__label">
@@ -102,16 +111,21 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
+                required
               />
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
       </div>
-      <div class="modal" id="image-preview-modal">
+      <div class="modal modal_type_preview" id="image-preview-modal">
         <div class="modal__container modal__container_type_preview">
-          <button type="button" class="modal__close-btn" aria-label="Close">
-            <img src="images/close.svg" alt="Close" />
+          <button
+            type="button"
+            class="modal__close-btn modal__close-btn-preview"
+            aria-label="Close"
+          >
+            <img src="images/close-white.svg" alt="Close" />
           </button>
           <img src="#" alt="" class="modal__preview-image" />
           <h2 class="modal__preview-caption"></h2>
