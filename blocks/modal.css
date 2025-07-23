@@ -15,6 +15,10 @@
   pointer-events: none;
 }
 
+.modal_type_preview {
+  padding: 0 16px;
+}
+
 .modal_is-opened {
   visibility: visible;
   opacity: 1;
@@ -205,10 +209,10 @@
     width: 32px;
     height: 32px;
   }
-  .modal__close-btn_preview {
+  .modal__close-btn-preview {
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: -48px;
+    right: 0px;
     width: 32px;
     height: 32px;
     background: transparent;
