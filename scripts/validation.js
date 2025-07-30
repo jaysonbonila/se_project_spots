@@ -56,4 +56,18 @@ function enableValidation(config) {
   });
 }
 
+function resetValidation(form, config) {
+  const inputs = Array.from(form.querySelectorAll(config.inputSelector));
+  const button = form.querySelector(config.submitButtonSelector);
+
+  inputs.forEach((input) => {
+    hideInputError(form, input, config);
+  });
+
+  button.classList.add(config.inactiveButtonClass);
+  button.disabled = true;
+}
+
 enableValidation(validationSettings);
+
+export { enableValidation, resetValidation };
