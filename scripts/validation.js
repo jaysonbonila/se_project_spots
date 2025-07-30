@@ -1,8 +1,8 @@
 const validationSettings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
-  submitButtonSelector: ".modal__button",
-  inactiveButtonClass: "modal__button_disabled",
+  submitButtonSelector: ".modal__submit-btn",
+  inactiveButtonClass: "modal__submit-btn_disabled",
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error_visible",
 };
@@ -58,16 +58,10 @@ function enableValidation(config) {
 
 function resetValidation(form, config) {
   const inputs = Array.from(form.querySelectorAll(config.inputSelector));
-  const button = form.querySelector(config.submitButtonSelector);
 
   inputs.forEach((input) => {
     hideInputError(form, input, config);
   });
-
-  button.classList.add(config.inactiveButtonClass);
-  button.disabled = true;
 }
 
 enableValidation(validationSettings);
-
-export { enableValidation, resetValidation };
