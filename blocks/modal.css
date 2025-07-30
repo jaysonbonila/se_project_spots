@@ -97,8 +97,9 @@
 }
 
 .modal__label {
-  margin: 0 0 32px;
+  margin-bottom: 32px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
+  display: block;
 }
 
 .modal__input {
@@ -107,8 +108,7 @@
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  margin-top: 6px;
-  margin-bottom: 16px;
+  margin: 8px 0 0;
   box-sizing: border-box;
   height: 52px;
   font-family: inherit;
@@ -116,6 +116,17 @@
 
 .modal__input::placeholder {
   color: #2121214d;
+}
+
+.modal__input:hover {
+  border: 1px solid rgb(33, 33, 33);
+}
+
+.modal__error {
+  display: block;
+  margin-top: 8px;
+  /* TODO - use correct color and font sizes*/
+  color: red;
 }
 
 .modal__submit-btn {
