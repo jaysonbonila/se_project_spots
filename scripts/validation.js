@@ -64,4 +64,9 @@ function resetValidation(form, config) {
   });
 }
 
+function disableButton(buttonElement, config) {
+  buttonElement.classList.add(config.inactiveButtonClass);
+  buttonElement.disabled = true;
+}
+
 enableValidation(validationSettings);
